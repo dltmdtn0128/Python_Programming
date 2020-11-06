@@ -10,7 +10,14 @@ for line in law:
     text=text+line.strip()+'\n'
 text=text.split()
 
+def replaceText(data):
+    t = re.sub('[특수문자들]',' ', data)
+    return t
+
+
 word_count =defaultdict(lambda:0)
+
+
 
 for word in text:
     word_count[word]+=1
